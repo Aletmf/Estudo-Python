@@ -1,0 +1,32 @@
+#Faça um programa que armazene os dados digitados pelo usuário, e se ele quiser adicionar mais, adicione ao final ou ao começo da lista.
+"""
+OBS: Código e exercícios criados pelo próprio aluno. Conhecimento prévio em C - Faculdade - Estrutura de Dados II
+Considerações: Código feito com pouco conhecimento em Python, e sem uso de funções, o que ajudaria muito na organização e modularização do código. É necessário também colocar algumas
+verificações de entrada. Porém, se o usuário digitar exatamente o que o código pede, ele funcionará.
+"""
+
+tamanhoLista = int(input("Qual a quantidade de valores de produtos você deseja inserir?\n-> "))
+
+lista = [0] * tamanhoLista
+
+for x in range(tamanhoLista):
+    lista[x] = float(input(f"Qual o valor que deseja inserir na posição {x+1}?"))
+    op = int(input("Deseja inserir mais algum número?\n1-SIM\n2-NÃO\n-> "))
+    if (op == 2):
+        break
+
+print("Elementos da lista: ")
+for x in lista:
+    print(x)
+
+op2 = int(input("Deseja inserir mais elementos na lista?\n1- SIM\n2- NÃO"))
+if op2 == 1:
+    op3 = input(print("Deseja inserir no final ou no começo?\n'F'' 'C'"))
+    elementoNovo = float(input("Digite o elemento a ser adicionado: "))
+    if(op3=='C'):
+        lista.insert(0, elementoNovo)
+    else: 
+        lista.append(elementoNovo)
+
+print(lista)
+
