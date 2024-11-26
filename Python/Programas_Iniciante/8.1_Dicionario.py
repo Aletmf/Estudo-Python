@@ -14,16 +14,8 @@ Liste todos os livros que estão disponíveis.
 Modifique o status de um livro para "emprestado" ou "disponível".
 Remova um livro da biblioteca.
 """
-import os
 
-#Variaveis para armazenar dados dos livros
 biblioteca = {}
-titulo = ""
-nomeAutor = ""
-anoPublicacao = ""
-genero = ""
-status = ""
-
 
 def obterDados():
     titulo = input("Digite o título do livro: ")
@@ -32,6 +24,7 @@ def obterDados():
     genero = input("\nDigite o gênero do livro: ")
     status = input("\nDigite o status de disponibildiade do livro (emprestado/disponível): ")
     status = status.upper()
+
 
     return titulo, nomeAutor, anoPublicacao, genero, status
 
@@ -88,6 +81,7 @@ def removerLivro(biblioteca):
     mostrarNomes(biblioteca)
     removedor = input("Digite o nome do livro a ser removido: ")
     biblioteca.pop(removedor)
+
 
 
 def menu():
