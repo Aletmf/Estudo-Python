@@ -30,3 +30,5 @@ if op2 == 1:
 
 print(lista)
 
+print(lista[0:3])
+

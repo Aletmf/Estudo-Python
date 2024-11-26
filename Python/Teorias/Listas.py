@@ -32,4 +32,7 @@ lista.sort() #Ordena do menor para o maior. Seja a lista composta por palavras o
 lista.sort(reverse = True) #Ordena de forma decrescente, do maior para o menor, seja a lista composta por palavras ou números.
 lista.reverse #Apenas inverte a lista.
 lista.sort(key = str.lower) #Trata os elementos como se estivessem todos em letra minúscula, e depois ordena.
-lista = lista2.copy #Serve para copiar os elementos da lista 2 na lista 1
+lista = lista2.copy() #Serve para copiar os elementos da lista 2 na lista 1
+
+for x in range(len(lista)):
+    print(x)
